@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  //p Welcome to #{title}
+
+  form(action='',method='post')
+      p Login :
+        input(id='login', type='text')
+      p Password :
+        input(id='password', type='password')
+
+      button Envoyer
+        submit
