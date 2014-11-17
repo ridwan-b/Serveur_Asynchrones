@@ -3,7 +3,7 @@ extends layout
 block content
 
   div.top
-    form.form-horizontal(method="post", id="loginForm")
+    form.form-horizontal(method="post", id="loginForm", action="../login")
       p
         label Username :
         input.span3(id="username", type="text", name="User", placeholder="Enter your username")
