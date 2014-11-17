@@ -1,14 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  //p Welcome to #{title}
 
-  form(action='',method='post')
-      p Login :
-        input(id='login', type='text')
-      p Password :
-        input(id='password', type='password')
-
-      button Envoyer
-        submit
+  div.top
+    form.form-horizontal(method="post", id="loginForm")
+      p
+        label Username :
+        input.span3(id="username", type="text", name="User", placeholder="Enter your username")
+      p
+        label Password :
+        input.span3(id="password", type="password", name="Password")
+      input.btn(type="submit", value="Log In")
+  div.footer
