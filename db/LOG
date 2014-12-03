@@ -1,0 +1,5 @@
+2014/12/03-21:33:02.094 14ec Recovering log #11
+2014/12/03-21:33:02.094 14ec Level-0 table #13: started
+2014/12/03-21:33:02.132 14ec Level-0 table #13: 315 bytes OK
+2014/12/03-21:33:02.202 14ec Delete type=0 #11
+2014/12/03-21:33:02.202 14ec Delete type=3 #10

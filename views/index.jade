@@ -24,13 +24,16 @@ html
             url: "/user/login"
             type: "POST"
             data : user
-            success: (data, status, response) ->
-              document.getElementById("login-username").value = data['username']
-              document.getElementById("login-password").value = data['password']
-  
-              document.getElementById("connect").style.visibility = "hidden"
-              document.getElementById("register").style.visibility = "hidden"
-              $("#resultat").html "Bonjour "+data['username']
+            success: (data, status) ->
+              if data
+                document.getElementById("login-username").value = data['username']
+                document.getElementById("login-password").value = data['password']
+    
+                document.getElementById("connect").style.visibility = "hidden"
+                document.getElementById("register").style.visibility = "hidden"
+                $("#resultat").html "Bonjour "+data['username']
+              else
+                $("#resultat").html "Login ou mot de passe incorrect"
             dataType: "json"
             
   script
@@ -49,14 +52,16 @@ html
             type: "POST"
             data : user
             success: (data, status, response) ->
-              document.getElementById("login-username").value = data['username']
-              document.getElementById("login-password").value = data['password']
-  
-              document.getElementById("register").style.visibility = "hidden"
-              
-              document.getElementById("resultat").style.visibility = "true"
-              $("#resultat").html "Création du compte pour "+data['username']
-
+              if data
+                document.getElementById("login-username").value = data['username']
+                document.getElementById("login-password").value = data['password']
+    
+                document.getElementById("register").style.visibility = "hidden"
+                
+                document.getElementById("resultat").style.visibility = "true"
+                $("#resultat").html "Création du compte pour "+data['username']
+              else
+                $("#resultat").html "Login existant"
             dataType: "json"
 
   body
@@ -65,9 +70,9 @@ html
         legend.login Connectez-vous
         form.form-horizontal#login
           p
-            input.span3#login-username(type="text", name="User", placeholder="Username ou Email")
+            input.span3#login-username(type="text", name="User", placeholder="Username ou Email", required)
           p
-            input.span3#login-password(type="password", name="Password", placeholder="Mot de passe")
+            input.span3#login-password(type="password", name="Password", placeholder="Mot de passe", required )
           input.btn(type="submit", value="Log In")
 
     
@@ -78,15 +83,15 @@ html
         legend Ou alors enregistrez-vous
         form.form-horizontal#signin
           p
-            input.span3#signin-username(type="text", name="Username", placeholder="Username")
+            input.span3#signin-username(type="text", name="Username", placeholder="Username", required)
           p
-            input.span3#signin-firstname(type="text", name="Firstname", placeholder="Prénom")
+            input.span3#signin-firstname(type="text", name="Firstname", placeholder="Prénom", required)
           p
-            input.span3#signin-lastname(type="text", name="Lastname", placeholder="Nom")
+            input.span3#signin-lastname(type="text", name="Lastname", placeholder="Nom", required)
           p
-            input.span3#signin-email(type="email", name="Email", placeholder="Email")
+            input.span3#signin-email(type="email", name="Email", placeholder="Email", required)
           p
-            input.span3#signin-password(type="password", name="Password", placeholder="Mot de passe")
+            input.span3#signin-password(type="password", name="Password", placeholder="Mot de passe", required)
           input.btn(type="submit", value="Sign In")
 
        
