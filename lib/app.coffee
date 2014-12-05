@@ -108,6 +108,7 @@ app.post '/user/signin', (req, res, next) ->
         if state is 200
           console.log "Création du user "+req.body.username+" | "+req.body.password+": OK"
           res.writeHead(200, { 'Content-Type': 'application/json' });
+          console.log json_user
           res.end json_user
           my_user = null
 

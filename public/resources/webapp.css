@@ -1,22 +1,70 @@
+html,
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: linear-gradient(to bottom, #69c, #fff) no-repeat;
-  width: 1280px;
+  height: 100%;
+  background-color: #fff;
+  border: 0px solid transparent;
+  font-size: 16px;
+  margin: 0px 0px 0px 0px;
+  min-height: 100%;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+}
+@font-face {
+  font-family: "My Cubic";
+  src: url("cubic.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+body {
+  font-size: 62.5%;
+  font: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+header {
+  width: 100%;
+  height: 110px;
+}
+header label {
+  font-size: 200%;
+  font: "My Cubic", Helvetica, Arial, sans-serif;
+  float: left;
+  margin-left: 10%;
+  padding-top: 35px;
+}
+header #login {
+  width: 90%;
+  padding-top: 10px;
+  margin-left: 70%;
+}
+header #login input.span3 {
+  width: 15em;
+  margin-left: 1em;
+}
+header #login input.btn {
+  width: 100px;
+  margin-left: 3em;
+}
+body > header {
+  box-shadow: 0.1em 0em 0.8em #c8c8c8; /*1px/10px 0px/10px 8px/10px */
+}
+main {
+  background: linear-gradient(to bottom, #afafaf, #fff) no-repeat;
+  width: 100%;
+}
+#connect {
+  margin-left: 40%;
 }
 fieldset {
-  width: 250px;
-  height: 175px;
-  margin-top: 20px;
+  width: 25em;
+  height: 17.5em;
+  margin-top: 2em;
 }
-input.span3 {
-  margin-left: 60px;
+#connect input.span3 {
+  width: 15em;
+  margin-left: 25%;
 }
-input.btn {
+#connect input.btn {
   width: 100px;
   margin-left: 82px;
-}
-div {
-  margin-left: 550px;
 }
 input.btn {
   border-radius: 15px;
@@ -25,5 +73,5 @@ input.span3 {
   border-radius: 10px 6px 10px 6px;
 }
 label#resultat {
-  margin-left: 575px;
+  margin-left: 50%;
 }
