@@ -50,7 +50,7 @@ main {
   background: linear-gradient(to bottom, #afafaf, #fff) no-repeat;
   width: 100%;
 }
-#connect {
+#register {
   margin-left: 40%;
 }
 fieldset {
@@ -58,11 +58,11 @@ fieldset {
   height: 17.5em;
   margin-top: 2em;
 }
-#connect input.span3 {
+#register input.span3 {
   width: 15em;
   margin-left: 25%;
 }
-#connect input.btn {
+#register input.btn {
   width: 100px;
   margin-left: 82px;
 }

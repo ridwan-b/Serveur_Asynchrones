@@ -56,7 +56,7 @@ html
                 document.getElementById("login-username").value = data['username']
                 document.getElementById("login-password").value = data['password']
     
-                document.getElementById("connect").style.visibility = "hidden"
+                document.getElementById("register").style.visibility = "hidden"
                 
                 document.getElementById("resultat").style.visibility = "true"
                 $("#resultat").html "Création du compte pour "+data['username']
@@ -66,19 +66,20 @@ html
 
   body
     header
-      label My NodeJS Site
-      form.form-horizontal#login
-        p
-          input.span3#login-username(type="text", name="User", placeholder="Username ou Email", required)
-        p
-          input.span3#login-password(type="password", name="Password", placeholder="Mot de passe", required )
-        input.btn(type="submit", value="Connection")
+      div#connect
+        label My NodeJS Site
+        form.form-horizontal#login
+          p
+            input.span3#login-username(type="text", name="User", placeholder="Username ou Email", required)
+          p
+            input.span3#login-password(type="password", name="Password", placeholder="Mot de passe", required )
+          input.btn(type="submit", value="Connection")
     
     main
       
       label#resultat
         
-      div#connect
+      div#register
         fieldset
           legend Enregistrez-vous
           form.form-horizontal#signin
