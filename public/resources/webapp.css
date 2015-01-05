@@ -2,16 +2,12 @@ html,
 body {
   height: 100%;
   background-color: #fff;
-  border: 0px solid transparent;
   font-size: 16px;
-  margin: 0px 0px 0px 0px;
-  min-height: 100%;
-  padding: 0px 0px 0px 0px;
   width: 100%;
 }
 @font-face {
   font-family: "My Cubic";
-  src: url("cubic.ttf");
+  src: url("../../public/resources/digitalanarchy-Regular.ttf");
   font-style: normal;
   font-weight: bold;
 }
@@ -22,6 +18,7 @@ body {
 header {
   width: 100%;
   height: 110px;
+  background: linear-gradient(to top, #efefef, #fff) no-repeat;
 }
 header label {
   font-size: 200%;
@@ -31,23 +28,25 @@ header label {
   padding-top: 35px;
 }
 header #login {
-  width: 90%;
+  width: 100%;
   padding-top: 10px;
-  margin-left: 70%;
+  margin-left: 85.2%;
 }
 header #login input.span3 {
-  width: 15em;
+  width: 12.41%;
   margin-left: 1em;
 }
 header #login input.btn {
-  width: 100px;
-  margin-left: 3em;
+  width: 8.27%;
+  margin-left: 3%;
+}
+input.btn:hover {
+  box-shadow: 0 0 1.5em #848484;
 }
 body > header {
   box-shadow: 0.1em 0em 0.8em #c8c8c8; /*1px/10px 0px/10px 8px/10px */
 }
 main {
-  background: linear-gradient(to bottom, #afafaf, #fff) no-repeat;
   width: 100%;
 }
 #register {
@@ -63,8 +62,8 @@ fieldset {
   margin-left: 25%;
 }
 #register input.btn {
-  width: 100px;
-  margin-left: 82px;
+  width: 150px;
+  margin-left: 63px;
 }
 input.btn {
   border-radius: 15px;

@@ -79,9 +79,9 @@ app.post '/user/login', (req, res, next) ->
               res.end null
               my_user = null
 
-#Action de Signin
-app.post '/user/signin', (req, res, next) ->
-  console.log "signin"
+#Action de signup
+app.post '/user/signup', (req, res, next) ->
+  console.log "signup"
   #Création de l'objet user qui sera converti en JSON par la suite
   my_user = new Object
   my_user.username = req.body.username

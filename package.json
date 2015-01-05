@@ -35,8 +35,10 @@
     "serve-static" : "latest",
     "stylus": "latest",
     "rimraf": "latest",
-	"leveldown": "0.10.0",
-    "level": "latest"
+	   "leveldown": "0.10.0",
+    "level": "latest",
+    "fs": "latest",
+    "lazy": "latest"
   },
   "devDependencies": {
     "should": "latest",

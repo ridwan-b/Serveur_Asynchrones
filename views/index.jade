@@ -2,14 +2,15 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title My NodeJS Site
+    title Mon Site NodeJS
     link(rel='icon', type='image/vnd.microsoft.icon', href='favicon.ico')
     link(rel='shortcut icon', type='image/x-icon', href='favicon.ico')
     link(rel='stylesheet', href='vendors/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='resources/webapp.css')
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    script(type='text/javascript', src='vendors/bootstrap/js/bootstrap.min.js')
     script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='vendors/jquery-1.11.1.min.js')
+    script(type='text/javascript', src='vendors/bootstrap/js/bootstrap.min.js')
   
               
   script
@@ -31,24 +32,24 @@ html
     
                 document.getElementById("connect").style.visibility = "hidden"
                 document.getElementById("register").style.visibility = "hidden"
+
                 $("#resultat").html "Bonjour "+data['username']
+                
+                $("#info_perso").html "Voici vos données personnelles: "
               else
                 $("#resultat").html "Login ou mot de passe incorrect"
             dataType: "json"
-            
-  script
-    :coffee
-      $(document).ready ->
-        $("#signin").on 'submit', (e) ->
+
+        $("#signup").on 'submit', (e) ->
           user =
-            username: $('#signin-username').val()
-            firstname: $('#signin-firstname').val()
-            lastname: $('#signin-lastname').val()
-            email: $('#signin-email').val()
-            password: $('#signin-password').val()
+            username: $('#signup-username').val()
+            firstname: $('#signup-firstname').val()
+            lastname: $('#signup-lastname').val()
+            email: $('#signup-email').val()
+            password: $('#signup-password').val()
           e.preventDefault()
           $.ajax
-            url: "/user/signin"
+            url: "/user/signup"
             type: "POST"
             data : user
             success: (data, status, response) ->
@@ -67,33 +68,39 @@ html
   body
     header
       div#connect
-        label My NodeJS Site
+        label Bienvenue sur notre TP NodeJS
         form.form-horizontal#login
           p
-            input.span3#login-username(type="text", name="User", placeholder="Username ou Email", required)
+            input.span3#login-username(type="text", placeholder="Username ou Email", required)
           p
-            input.span3#login-password(type="password", name="Password", placeholder="Mot de passe", required )
+            input.span3#login-password(type="password", placeholder="Mot de passe", required )
           input.btn(type="submit", value="Connection")
+        img
+          src="/resources/key.png"
     
     main
-      
-      label#resultat
         
       div#register
         fieldset
           legend Enregistrez-vous
-          form.form-horizontal#signin
+          form.form-horizontal#signup
             p
-              input.span3#signin-username(type="text", name="Username", placeholder="Username", required)
+              input.span3#signup-username(type="text", placeholder="Username", required)
             p
-              input.span3#signin-firstname(type="text", name="Firstname", placeholder="Prénom", required)
+              input.span3#signup-firstname(type="text", placeholder="Prénom", required)
             p
-              input.span3#signin-lastname(type="text", name="Lastname", placeholder="Nom", required)
+              input.span3#signup-lastname(type="text", placeholder="Nom", required)
             p
-              input.span3#signin-email(type="email", name="Email", placeholder="Email", required)
+              input.span3#signup-email(type="email", placeholder="Email", required)
             p
-              input.span3#signin-password(type="password", name="Password", placeholder="Mot de passe", required)
-            input.btn(type="submit", value="Enregistrement")
+              input.span3#signup-password(type="password", placeholder="Mot de passe", required)
+            p
+              input.span3#signup-password-bis(type="password", placeholder="Répétez le mot de passe", required)
+            input.btn(type="submit", value="Créer mon compte")
 
-       
+      p
+        label#resultat
+      
+      p
+        label#info_perso
   
