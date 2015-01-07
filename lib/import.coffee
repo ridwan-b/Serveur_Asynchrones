@@ -1,11 +1,7 @@
-console.log 'import.coffee ok'
+console.log('import.coffee ok')
 
-fs = require 'fs'
-parse = require 'csv-parse'
+fs = require('fs')
 
-source = fs.createReadStream './resources/users.txt'
-parser=parse
-  delimiter ','
+source = fs.createReadStream('views/resources/users.txt')
 
-#implémenter flux d'écriture et lecture de fichier pour remplir la bdd leveldb (cvs->leveldb)
-#faire chemin retour (leveldb->csv)
+console.log(source.buffer)

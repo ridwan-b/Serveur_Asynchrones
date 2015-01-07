@@ -1,5 +1,15 @@
-2015/01/02-16:57:22.507 2ce8 Recovering log #32
-2015/01/02-16:57:22.507 2ce8 Level-0 table #34: started
-2015/01/02-16:57:22.536 2ce8 Level-0 table #34: 290 bytes OK
-2015/01/02-16:57:22.581 2ce8 Delete type=0 #32
-2015/01/02-16:57:22.581 2ce8 Delete type=3 #31
+2015/01/07-21:55:33.665 1dc Recovering log #74
+2015/01/07-21:55:33.665 1dc Level-0 table #76: started
+2015/01/07-21:55:33.746 1dc Level-0 table #76: 323 bytes OK
+2015/01/07-21:55:33.802 1dc Delete type=0 #74
+2015/01/07-21:55:33.803 1dc Delete type=2 #75
+2015/01/07-21:55:33.804 1dc Delete type=3 #72
+2015/01/07-21:55:33.805 1a58 Compacting 5@0 + 0@1 files
+2015/01/07-21:55:33.845 1a58 Generated table #78: 32 keys, 656 bytes
+2015/01/07-21:55:33.845 1a58 Compacted 5@0 + 0@1 files => 656 bytes
+2015/01/07-21:55:33.865 1a58 compacted to: files[ 0 2 0 0 0 0 0 ]
+2015/01/07-21:55:33.867 1a58 Delete type=2 #29
+2015/01/07-21:55:33.867 1a58 Delete type=2 #34
+2015/01/07-21:55:33.868 1a58 Delete type=2 #66
+2015/01/07-21:55:33.869 1a58 Delete type=2 #73
+2015/01/07-21:55:33.870 1a58 Delete type=2 #76

@@ -38,7 +38,9 @@
 	   "leveldown": "0.10.0",
     "level": "latest",
     "fs": "latest",
-    "lazy": "latest"
+    "lazy": "latest",
+    "util": "latest",
+    "stream": "latest"
   },
   "devDependencies": {
     "should": "latest",

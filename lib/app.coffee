@@ -49,6 +49,11 @@ app.get '/', (req, res, next) ->
 app.post '/user/login', (req, res, next) ->
   console.log "login"
   #On requête la bdd
+  client.users.get_by_username " ", (err,user) ->
+    console.log "GET"
+    console.log "size="+user.size
+    for i in [0...user.size]
+      console.log "data"+user['username']
   client.users.get_by_username req.body.username, (err,user) ->
     #Si le retour est correct (pas d'erreur)
     if err is 200
