@@ -14,7 +14,6 @@ module.exports = (db="#{__dirname}../db") ->
         [_, username, key] = data.key.split ':'
         user.username ?= username
         user[key] = data.value
-        console.log user.username
       .on 'error', (err) ->
         callback err
       .on 'end', ->

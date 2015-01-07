@@ -49,11 +49,6 @@ app.get '/', (req, res, next) ->
 app.post '/user/login', (req, res, next) ->
   console.log "login"
   #On requête la bdd
-  client.users.get_by_username " ", (err,user) ->
-    console.log "GET"
-    console.log "size="+user.size
-    for i in [0...user.size]
-      console.log "data"+user['username']
   client.users.get_by_username req.body.username, (err,user) ->
     #Si le retour est correct (pas d'erreur)
     if err is 200
@@ -95,7 +90,7 @@ app.post '/user/signup', (req, res, next) ->
   my_user.email = req.body.email
   my_user.password = req.body.password
   #Conversion JSON
-  json_user=JSON.stringify my_user
+  json_user= JSON.stringify my_user
 
   #Vérification de la non-présence du username et de l'email dans la bdd leveldb
   client.users.get_by_username my_user.username, (err,user) ->
